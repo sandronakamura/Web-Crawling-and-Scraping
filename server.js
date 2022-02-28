@@ -37,20 +37,20 @@ app.get("/", async (request, response) => {
             }
           }
 
-          itens.forEach((item) => {
-            results.push({
-              url: item.getAttribute("href"),
-              text: item.innerText,
-            });
-          });
+          //   itens.forEach((item) => {
+          //     results.push({
+          //       url: item.getAttribute("href"),
+          //       text: item.innerText,
+          //     });
+          //   });
 
-          precos.forEach((item) => {
-            results2.push({
-              text: item.innerText,
-            });
-          });
-          console.log(results.length);
-          console.log(results2.length);
+          //   precos.forEach((item) => {
+          //     results2.push({
+          //       text: item.innerText,
+          //     });
+          //   });
+          //   console.log(results.length);
+          //   console.log(results2.length);
 
           return results;
         });
@@ -70,11 +70,4 @@ app.get("/", async (request, response) => {
 
 app.listen(3002, () => console.log("Servidor online!"));
 
-// (async () => {
-//   const browser = await puppeteer.launch();
-//   const page = await browser.newPage();
-//   await page.goto("https://www.magazineluiza.com.br/");
-//   //await page.screenshot({ path: "example.png" });
 
-//   await browser.close();
-// })();
